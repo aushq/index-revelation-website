@@ -7,15 +7,15 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Notes", href: "/notes" },
-  { name: "Contact", href: "/contact" },
+  //{ name: "Notes", href: "/notes" },
+  //{ name: "Contact", href: "/contact" },
 ];
 
 const socialLinks = [
-  { name: "Discord", icon: "mdi-discord", href: "https://discord.com" },
-  { name: "Reddit", icon: "mdi-reddit", href: "https://reddit.com" },
-  { name: "X", icon: "mdi-twitter", href: "https://x.com" },
-  { name: "YouTube", icon: "mdi-youtube", href: "https://youtube.com" },
+  { name: "Discord", icon: "mdi-discord", href: "https://discord.gg/VqQxWBCU" },
+  { name: "Reddit", icon: "mdi-reddit", href: "https://www.reddit.com/user/kairivx/" },
+  { name: "X", icon: "mdi-twitter", href: "https://x.com/lvy_exe" },
+  // { name: "YouTube", icon: "mdi-youtube", href: "https://youtube.com" },
 ];
 
 export function Navigation() {

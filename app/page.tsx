@@ -4,11 +4,31 @@ import { HorizontalScroll } from "@/components/horizontal-scroll";
 import { Navigation } from "@/components/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
+import { useState } from "react";
 
 
 export default function HomePage() {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || isSubmitting) return;
+
+    setIsSubmitting(true);
+    // 这里可以添加实际的邮箱提交逻辑，比如发送到API
+    console.log("Email submitted:", email);
+
+    // 模拟提交过程
+    setTimeout(() => {
+      setSubmitted(true);
+      setIsSubmitting(false);
+      setEmail("");
+    }, 1000);
+  };
 
   const artworkPosters = [
     { id: 1, title: "Concept Art 1", query: "dark fantasy western magic artwork mystical creatures" },
@@ -148,7 +168,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-2xl shadow-accent/20 border border-accent/30">
-              <Image src="/images/story.png" alt="Game Story" fill className="object-cover" />
+              <Image src="/images/story.png" alt="Game Story" fill className="object-cover brightness-75" />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
           </div>
@@ -181,7 +201,6 @@ export default function HomePage() {
                       fill
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                   </div>
 
                   {/* Champion Description */}
@@ -204,14 +223,14 @@ export default function HomePage() {
                     <p className="text-accent/90 text-xl italic font-serif font-bold">{champion.quote}</p>
                     <p className="text-foreground/80 text-xl leading-relaxed">{champion.description}</p>
 
-                    <div className="pt-4">
+                    {/* <div className="pt-4">
                       <Button
                         size="lg"
                         className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold px-8 py-6 rounded-full shadow-lg shadow-accent/40 transition-all hover:scale-105"
                       >
                         Summon {champion.title}
                       </Button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -219,7 +238,7 @@ export default function HomePage() {
           </HorizontalScroll>
         </section>
 
-        {/* Game Posters Showcase */}
+        {/* Game Posters Showcase
         <section className="container mx-auto px-4 py-12">
           <div className="mb-8 text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
@@ -252,7 +271,7 @@ export default function HomePage() {
         </section>
 
         {/* Gameplay Features */}
-        <section className="container mx-auto px-4 py-16">
+        {/* <section className="container mx-auto px-4 py-16">
           <div className="mb-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
               Master the Arcane Arts
@@ -280,13 +299,14 @@ export default function HomePage() {
               </Card>
             ))}
           </HorizontalScroll>
-        </section>
+        </section> */}
 
-        <section className="container mx-auto px-4 py-16">
+        {/* Coming Soon Section */}
+        <section className="container mx-auto px-4 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-2xl shadow-accent/20 border border-accent/30 order-2 md:order-1">
+            <div className="relative h-120 md:w-full min-h-[400px] rounded-lg overflow-hidden shadow-2xl shadow-accent/20 border border-accent/30 order-2 md:order-1">
               <Image
-                src={`/.jpg?height=500&width=400&query=dark fantasy magic portal otherworldly mystical gateway enchanted`}
+                src={"/images/coming-soon.png"}
                 alt="Coming Soon"
                 fill
                 className="object-cover"
@@ -335,14 +355,30 @@ export default function HomePage() {
               <p className="text-xl mb-8 text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
                 Step into a realm of magic and mystery. Protect the Index, summon heroes, and shape your destiny.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-10 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Begin Your Quest
-                </Button>
+              <div className="flex flex-col gap-4 justify-center items-center max-w-md mx-auto">
+                {submitted ? (
+                  <div className="text-accent font-semibold text-xl">
+                    ✨ Thank you! We'll keep you updated.
+                  </div>
+                ) : (
+                  <form onSubmit={handleEmailSubmit} className="flex flex-col gap-3 w-full">
+                    <Input
+                      type="email"
+                      placeholder="Enter your email for updates"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full bg-background/50 border-accent/50 text-foreground placeholder:text-muted-foreground focus:border-accent"
+                      required
+                    />
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-fit mx-auto bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-2 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105 disabled:opacity-50"
+                    >
+                      {isSubmitting ? "Submitting..." : "Join Waitlist"}
+                    </Button>
+                  </form>
+                )}
               </div>
             </div>
           </Card>
