@@ -50,32 +50,12 @@ export default function HomePage() {
       <Navigation />
 
       <main className="min-h-screen">
-        <section className="container mx-auto px-4 py-16">
-          <div className="text-center mb-8">
-            <h1
-              className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-balance drop-shadow-[0_0_30px_rgba(212,175,55,0.6)]"
-              style={{
-                background: "linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              INDEX REVELATION
-            </h1>
-            <div className="flex justify-center gap-2 text-accent text-lg opacity-75">
-              <span>✦</span>
-              <span>The Forbidden Archive Awaits</span>
-              <span>✦</span>
-            </div>
-          </div>
-        </section>
-
         {/* Hero Section with Game Poster */}
         <section className="relative">
-          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gradient-to-b from-accent/20 via-primary/40 to-background overflow-hidden">
+          <div className="relative w-full aspect-[16/9] md:aspect-[16/9] bg-gradient-to-b from-accent/20 via-primary/40 to-background overflow-hidden
+          [mask-image:linear-gradient(to_top,transparent_0%,black_40%)]">
             <Image
-              src="/images/index-revelation-poster.png"
+              src="/images/image.png"
               alt="Index Revelation Game Poster"
               fill
               className="object-cover opacity-90"
@@ -83,7 +63,7 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-40% to-background/95" />
 
-            {/* Invite Rewards Button */}
+            {/* Invite Rewards Button 
             <div className="absolute top-4 right-4 md:top-8 md:right-8">
               <Button
                 size="lg"
@@ -91,7 +71,7 @@ export default function HomePage() {
               >
                 ✨ Invite Rewards
               </Button>
-            </div>
+            </div>*/}
           </div>
 
           <div className="container mx-auto px-4 -mt-8 relative z-10">
@@ -116,32 +96,32 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
         </section>
 
-        {/* Promo Video Section */}
+        {/* Game Title */}
         <section className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden bg-card shadow-2xl shadow-accent/20 border-accent/30">
-              <div className="relative aspect-video bg-muted flex items-center justify-center group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-transparent" />
-                <Image
-                  src="/indie-game-promotional-video-thumbnail.jpg"
-                  alt="Game Promo Video"
-                  fill
-                  className="object-cover opacity-70"
-                />
-                <Button
-                  size="lg"
-                  className="relative z-10 rounded-full h-20 w-20 bg-accent hover:bg-accent/90 text-accent-foreground group-hover:scale-110 transition-all shadow-2xl shadow-accent/50"
-                >
-                  <Play className="h-8 w-8 fill-current" />
-                  <span className="sr-only">Play promotional video</span>
-                </Button>
-              </div>
-            </Card>
+          <div className="text-center mb-8">
+            <h1
+              className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-balance drop-shadow-[0_0_30px_rgba(212,175,55,0.6)]"
+              style={{
+                background: "linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              INDEX REVELATION
+            </h1>
+            <div className="flex justify-center gap-2 text-accent text-lg opacity-75">
+              <span>✦</span>
+              <span>The Forbidden Archive Awaits</span>
+              <span>✦</span>
+            </div>
           </div>
         </section>
 
+        {/* Story Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -168,6 +148,7 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Champion Section */}
         <section className="container mx-auto px-4 py-16">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
