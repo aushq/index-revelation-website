@@ -1,11 +1,15 @@
-import { Navigation } from "@/components/navigation"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { HorizontalScroll } from "@/components/horizontal-scroll"
-import { Play, Download } from "lucide-react"
-import Image from "next/image"
+"use client";
+
+import { HorizontalScroll } from "@/components/horizontal-scroll";
+import { Navigation } from "@/components/navigation";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Download } from "lucide-react";
+import Image from "next/image";
+
 
 export default function HomePage() {
+
   const artworkPosters = [
     { id: 1, title: "Concept Art 1", query: "dark fantasy western magic artwork mystical creatures" },
     { id: 2, title: "Concept Art 2", query: "medieval fantasy character warrior mage dark atmosphere" },
@@ -39,7 +43,7 @@ export default function HomePage() {
       title: "Hermes",
       image: "/images/hermes.png",
       quote:
-        '"Distance means nothing when the heart is steady.""The forest taught me this: strength is quiet, and so am I.""As long as these woods breathe, so will I stand."',
+        '"Distance means nothing when the heart is steady."',
       description:
         "A mysterious archer from the enchanted forests, wielding the power of ancient magic and nature itself.",
     },
@@ -50,9 +54,9 @@ export default function HomePage() {
       <Navigation />
 
       <main className="min-h-screen">
-        {/* Hero Section with Game Poster */}
+        {/* Game Poster */}
         <section className="relative">
-          <div className="relative w-full aspect-[16/9] md:aspect-[16/9] bg-gradient-to-b from-accent/20 via-primary/40 to-background overflow-hidden
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gradient-to-b from-accent/20 via-primary/40 to-background overflow-hidden
           [mask-image:linear-gradient(to_top,transparent_0%,black_40%)]">
             <Image
               src="/images/image.png"
@@ -74,7 +78,7 @@ export default function HomePage() {
             </div>*/}
           </div>
 
-          <div className="container mx-auto px-4 -mt-8 relative z-10">
+          {/* <div className="container mx-auto px-4 -mt-8 relative z-10">
             <div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
               <div className="magical-button-glow">
                 <Button
@@ -95,7 +99,7 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </section>
 
@@ -160,11 +164,11 @@ export default function HomePage() {
             </p>
           </div>
 
-          <HorizontalScroll>
+          <HorizontalScroll className="snap-x snap-mandatory">
             {champions.map((champion) => (
               <div
                 key={champion.id}
-                className="flex-shrink-0 w-full md:w-[900px] bg-card rounded-lg overflow-hidden border border-accent/30 shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all"
+                className="snap-center flex-shrink-0 w-full md:w-[900px] bg-card rounded-lg overflow-hidden border border-accent/30 shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
                   {/* Champion Image */}
@@ -181,7 +185,7 @@ export default function HomePage() {
                   {/* Champion Description */}
                   <div className="flex flex-col justify-center space-y-4">
                     <div>
-                      <p className="text-sm text-accent/80 uppercase tracking-widest mb-2">{champion.name}</p>
+                      <p className="text-sm text-accent/80 tracking-widest mb-2">{champion.name}</p>
                       <h3
                         className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]"
                         style={{

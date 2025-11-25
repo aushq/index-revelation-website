@@ -1,17 +1,7 @@
-[00:00:00.779] Server  LOG      ✓ Ready in 506ms
-[00:00:10.583] Server  LOG      ○ Compiling / ...
-[00:00:16.422] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:16.470] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:00:16.470] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:00:16.470] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://crispy-fiesta-459w6479pvwc57vx-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://crispy-fiesta-459w6479pvwc57vx-3000.app.github.dev/","r":"https://crispy-fiesta-459w6479pvwc57vx.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764052191702}
-[00:01:07.741] Server  LOG      ✓ Compiled in 179ms
-[00:01:12.937] Server  LOG      ✓ Compiled in 63ms
-[00:01:42.191] Server  LOG      ✓ Compiled in 31ms
-[00:02:53.111] Server  LOG      ✓ Compiled in 37ms
-[00:05:49.746] Server  LOG      ✓ Compiled in 42ms
-[00:06:07.649] Server  LOG      ✓ Compiled in 48ms
-[00:06:37.179] Server  LOG      ✓ Compiled in 380ms
-[00:07:52.888] Server  LOG      ✓ Compiled in 97ms
-[00:08:43.587] Server  LOG      ✓ Compiled in 101ms
-[00:08:46.264] Server  LOG      ✓ Compiled in 44ms
-[00:08:59.339] Server  LOG      ✓ Compiled in 149ms
+[00:00:01.039] Server  LOG      ✓ Ready in 737ms
+[00:00:21.041] Server  LOG      ○ Compiling / ...
+[00:00:24.872] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:24.872] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:24.872] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:24.872] Browser LOG     %c[Vercel Web Analytics]%c [pageview] https://crispy-fiesta-459w6479pvwc57vx-3000.app.github.dev/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"https://crispy-fiesta-459w6479pvwc57vx-3000.app.github.dev/","r":"https://crispy-fiesta-459w6479pvwc57vx.github.dev/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1764058434705}
+[00:02:57.788] Server  LOG      ✓ Compiled in 263ms
