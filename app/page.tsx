@@ -53,11 +53,10 @@ export default function HomePage() {
     <div className="magical-bg">
       <Navigation />
 
-      <main className="min-h-screen">
+      <main>
         {/* Game Poster */}
         <section className="relative">
-          <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gradient-to-b from-accent/20 via-primary/40 to-background overflow-hidden
-          [mask-image:linear-gradient(to_top,transparent_0%,black_40%)]">
+          <div className="absolute w-full h-120 bg-linear-to-b from-accent/20 via-primary/40 to-background overflow-hidden">
             <Image
               src="/images/image.png"
               alt="Index Revelation Game Poster"
@@ -65,9 +64,9 @@ export default function HomePage() {
               className="object-cover opacity-90"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-40% to-background/95" />
+            <div className="absolute inset-0 bg-linear-to-b from-transparent to-background/95" />
 
-            {/* Invite Rewards Button 
+            {/* Invite Rewards Button
             <div className="absolute top-4 right-4 md:top-8 md:right-8">
               <Button
                 size="lg"
@@ -105,22 +104,25 @@ export default function HomePage() {
 
         {/* Game Title */}
         <section className="container mx-auto px-4 py-16">
-          <div className="text-center mb-8">
-            <h1
-              className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-balance drop-shadow-[0_0_30px_rgba(212,175,55,0.6)]"
-              style={{
-                background: "linear-gradient(135deg, #d4af37 0%, #f4d03f 50%, #d4af37 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              INDEX REVELATION
-            </h1>
-            <div className="flex justify-center gap-2 text-accent text-lg opacity-75">
-              <span>✦</span>
-              <span>The Forbidden Archive Awaits</span>
-              <span>✦</span>
+            {/* Game Title Overlay */}
+          <div className="flex h-80 items-center justify-center">
+            <div className="text-center px-4">
+              <h1
+                className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-balance drop-shadow-[0_0_30px_rgba(212,175,55,0.6)]"
+                style={{
+                  background: "linear-gradient(135deg, #ffffff 0%, #e1ddc9 50%, #ffffff 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                INDEX REVELATION
+              </h1>
+              <div className="flex justify-center gap-2 text-[#e1ddc9] text-base md:text-lg opacity-75">
+                <span>✦</span>
+                <span>The Forbidden Archive Awaits</span>
+                <span>✦</span>
+              </div>
             </div>
           </div>
         </section>
