@@ -70,7 +70,7 @@ export default function HomePage() {
             <div className="absolute top-4 right-4 md:top-8 md:right-8">
               <Button
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground border-2 border-accent/50 font-bold text-lg px-6 py-6 shadow-lg shadow-accent/50 animate-pulse"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground border-2 border-accent/50 font-bold text-xl px-6 py-6 shadow-lg shadow-accent/50 animate-pulse"
               >
                 ✨ Invite Rewards
               </Button>
@@ -82,7 +82,7 @@ export default function HomePage() {
               <div className="magical-button-glow">
                 <Button
                   size="lg"
-                  className="magical-button ios-glow bg-gradient-to-br from-accent to-yellow-400 hover:from-accent/90 hover:to-yellow-300 text-accent-foreground font-bold text-lg px-12 py-7 rounded-full shadow-2xl border border-accent/50 min-w-[240px] transition-all hover:scale-110"
+                  className="magical-button ios-glow bg-gradient-to-br from-accent to-yellow-400 hover:from-accent/90 hover:to-yellow-300 text-accent-foreground font-bold text-xl px-12 py-7 rounded-full shadow-2xl border border-accent/50 min-w-[240px] transition-all hover:scale-110"
                 >
                   <Download className="mr-2 h-5 w-5" />
                   iOS Download
@@ -91,7 +91,7 @@ export default function HomePage() {
               <div className="magical-button-glow">
                 <Button
                   size="lg"
-                  className="magical-button android-glow bg-gradient-to-br from-purple-500 to-blue-400 hover:from-purple-400 hover:to-blue-300 text-white font-bold text-lg px-12 py-7 rounded-full shadow-2xl border border-purple-400/50 min-w-[240px] transition-all hover:scale-110"
+                  className="magical-button android-glow bg-gradient-to-br from-purple-500 to-blue-400 hover:from-purple-400 hover:to-blue-300 text-white font-bold text-xl px-12 py-7 rounded-full shadow-2xl border border-purple-400/50 min-w-[240px] transition-all hover:scale-110"
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Android Download
@@ -134,13 +134,13 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-bold text-accent drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                 The Story
               </h2>
-              <p className="text-lg text-foreground/90 leading-relaxed">
+              <p className="text-xl text-foreground/90 leading-relaxed">
                 In the game, you are the{" "}
                 <span className="text-accent font-semibold">Keeper of the Forbidden Index</span> — a legendary archive
                 filled with banned books. However, countless powerful factions are desperate to claim its overwhelming
                 power, and it's your mission to protect the Index and recover the lost forbidden tomes.
               </p>
-              <p className="text-lg text-foreground/90 leading-relaxed">
+              <p className="text-xl text-foreground/90 leading-relaxed">
                 As the Keeper, you can{" "}
                 <span className="text-accent font-semibold">summon heroes from the forbidden tomes</span> and crush
                 enemies who dare to steal the Index. You'll experience smooth progression, huge rewards, and insanely
@@ -160,7 +160,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
               <span className="text-accent">Legendary</span> Champions
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Summon powerful heroes to aid you in your quest. Each champion possesses unique abilities and a tragic
               past.
             </p>
@@ -187,7 +187,7 @@ export default function HomePage() {
                   {/* Champion Description */}
                   <div className="flex flex-col justify-center space-y-4">
                     <div>
-                      <p className="text-sm text-accent/80 tracking-widest mb-2">{champion.name}</p>
+                      <p className="text-sm text-accent/80 tracking-widest mb-2 font-serif font-bold">{champion.name}</p>
                       <h3
                         className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.5)]"
                         style={{
@@ -201,8 +201,8 @@ export default function HomePage() {
                       </h3>
                     </div>
 
-                    <p className="text-accent/90 text-lg italic">{champion.quote}</p>
-                    <p className="text-foreground/80 text-lg leading-relaxed">{champion.description}</p>
+                    <p className="text-accent/90 text-xl italic font-serif font-bold">{champion.quote}</p>
+                    <p className="text-foreground/80 text-xl leading-relaxed">{champion.description}</p>
 
                     <div className="pt-4">
                       <Button
@@ -225,7 +225,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
               Journey Through Mystical Realms
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
               Venture into a world where ancient magic meets the untamed frontier. Discover breathtaking landscapes,
               mysterious artifacts, and legendary creatures in this epic western fantasy adventure.
             </p>
@@ -257,7 +257,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
               Master the Arcane Arts
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
               Harness powerful spells, solve ancient riddles, and battle supernatural foes. Forge your destiny through
               cunning strategy, magical prowess, and unwavering courage.
             </p>
@@ -298,7 +298,7 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-bold drop-shadow-[0_0_20px_rgba(212,175,55,0.4)]">
                 <span className="text-accent">Coming</span> Soon
               </h2>
-              <p className="text-lg text-foreground/90 leading-relaxed">
+              <p className="text-xl text-foreground/90 leading-relaxed">
                 The journey doesn't end here. New chapters await as we expand the Index Revelation universe with:
               </p>
               <ul className="space-y-3 text-foreground/90">
@@ -319,7 +319,7 @@ export default function HomePage() {
                   <span>Guild wars and competitive battles</span>
                 </li>
               </ul>
-              <p className="text-accent font-semibold text-lg">Stay tuned for the next revelation...</p>
+              <p className="text-accent font-semibold text-xl">Stay tuned for the next revelation...</p>
             </div>
           </div>
         </section>
@@ -332,13 +332,13 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_12px_rgba(212,175,55,0.5)]">
                 Your Legend Awaits
               </h2>
-              <p className="text-lg mb-8 text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+              <p className="text-xl mb-8 text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
                 Step into a realm of magic and mystery. Protect the Index, summon heroes, and shape your destiny.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-10 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-10 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105"
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Begin Your Quest

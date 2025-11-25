@@ -41,9 +41,9 @@
 }
 
 @theme inline {
-  --font-sans: "Cinzel Decorative", "Geist", "Geist Fallback", serif;
-  --font-serif: "Cinzel", serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: "Alegreya", "Geist", "Geist Fallback", serif;
+  --font-serif: "Cinzel Decorative", serif;
+  --font-mono: "Geist Mono", "Geist Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -88,6 +88,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans), "Geist", "Geist Fallback", serif !important;
+    font-weight: 200 !important;
   }
 
   /* Add mystical glow effects and magical atmosphere */

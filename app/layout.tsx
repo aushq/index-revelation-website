@@ -1,17 +1,17 @@
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next"
-import { Cinzel, Cinzel_Decorative } from "next/font/google"
+import { Alegreya, Cinzel_Decorative } from "next/font/google"
 import type React from "react"
 import "./globals.css"
 
-const cinzelDecorative = Cinzel_Decorative({
-  weight: ["400", "700", "900"],
+const alegreya = Alegreya({
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-sans",
 })
 
-const cinzel = Cinzel({
-  weight: ["400", "500", "600", "700"],
+const cinzelDecorative = Cinzel_Decorative({
+  weight: ["400", "700", "900"],
   subsets: ["latin"],
   variable: "--font-serif",
 })
@@ -48,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cinzelDecorative.variable} ${cinzel.variable} font-sans antialiased`}>
+      <body className={`${alegreya.variable} ${cinzelDecorative.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

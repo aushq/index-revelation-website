@@ -30,7 +30,7 @@ export function Navigation() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-lg font-bold transition-all hover:text-accent hover:scale-105",
+                "text-xl font-bold font-serif transition-all hover:text-accent hover:scale-105",
                 pathname === item.href
                   ? "text-accent drop-shadow-[0_0_8px_rgba(212,175,55,0.6)]"
                   : "text-primary-foreground/80"
