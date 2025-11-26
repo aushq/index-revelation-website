@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from "@/components/ga"
 import type { Metadata } from "next"
 import { Alegreya, Cinzel_Decorative } from "next/font/google"
 import type React from "react"
@@ -17,27 +17,26 @@ const cinzelDecorative = Cinzel_Decorative({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.indexrevelation.com"),
+  metadataBase: new URL("https://www.index-revelation.com"),
   title: "Index Revelation - Embark on a Magical Journey",
   description:
     "Discover Index Revelation, a western fantasy adventure filled with magic, mystery, and wonder. Download now for iOS and Android.",
-  generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    // icon: [
+    //   {
+    //     url: "/icon-light-32x32.png",
+    //     media: "(prefers-color-scheme: light)",
+    //   },
+    //   {
+    //     url: "/icon-dark-32x32.png",
+    //     media: "(prefers-color-scheme: dark)",
+    //   },
+    //   {
+    //     url: "/icon.svg",
+    //     type: "image/svg+xml",
+    //   },
+    // ],
+    // apple: "/apple-icon.png",
   },
 }
 
@@ -50,7 +49,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${alegreya.variable} ${cinzelDecorative.variable} font-sans antialiased`}>
         {children}
-        <Analytics />
+        <GoogleAnalytics gaId="G-2EN60VB2T3" />
       </body>
     </html>
   )
