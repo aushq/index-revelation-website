@@ -7,27 +7,46 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { useState } from "react";
+import isEmail from 'validator/es/lib/isEmail';
 
 
 export default function HomePage() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [helperText, setHelperText] = useState("");
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || isSubmitting) return;
 
+    if (!isEmail(email)) {
+      setHelperText("Please enter a valid email address");
+      return;
+    }
+
     setIsSubmitting(true);
-    // 这里可以添加实际的邮箱提交逻辑，比如发送到API
+
     console.log("Email submitted:", email);
 
-    // 模拟提交过程
-    setTimeout(() => {
-      setSubmitted(true);
+    const res = await fetch('https://icw.index-revelation.com/join-waitlist', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    })
+
+    if (!res.ok) {
+      const data = await res.json();
       setIsSubmitting(false);
-      setEmail("");
-    }, 1000);
+      setHelperText(data.message)
+      return;
+    }
+
+    setSubmitted(true);
+    setIsSubmitting(false);
+    setEmail("");
   };
 
   const artworkPosters = [
@@ -370,6 +389,17 @@ export default function HomePage() {
                       className="w-full bg-background/50 border-accent/50 text-foreground placeholder:text-muted-foreground focus:border-accent"
                       required
                     />
+                    {/* helper text */}
+                    {
+                      helperText && (
+                        <div>
+                          <p className="text-sm text-muted-foreground">
+                            {}
+                          </p>
+                        </div>
+                      )
+                    }
+
                     <Button
                       type="submit"
                       disabled={isSubmitting}
