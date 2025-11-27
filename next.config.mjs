@@ -2,13 +2,15 @@ import Icons from 'unplugin-icons/webpack'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  turbopack: {},
+  
   typescript: {
     ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
   },
-  turbopack: (config) => {
+  webpack: (config) => {
     config.plugins.push(
       Icons({
         compiler: 'react',

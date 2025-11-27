@@ -86,6 +86,15 @@ export default function HomePage() {
       description:
         "A mysterious archer from the enchanted forests, wielding the power of ancient magic and nature itself.",
     },
+    {
+      id: 3,
+      name: "The Iron Warlord",
+      title: "Raider",
+      image: "/images/raider.png",
+      quote: '"Let the world burn if peace must be forged in fire."',
+      description:
+        "Raider is a legendary warrior who has fought in countless battles. While beneath his blood-stained armor is someone who still wishes for a quiet, peaceful life",
+    }
   ]
 
   return (
@@ -159,7 +168,7 @@ export default function HomePage() {
               </h1>
               <div className="flex justify-center gap-2 text-[#e1ddc9] text-base md:text-lg opacity-75">
                 <span>✦</span>
-                <span>The Forbidden Archive Awaits</span>
+                <span>KEYS TO ETERNITY</span>
                 <span>✦</span>
               </div>
             </div>
