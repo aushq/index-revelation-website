@@ -106,7 +106,7 @@ export default function HomePage() {
       image: "/images/shiro.png",
       quote: '"Hushhhâ€”â€”â€”The dream needs silence to take shape."',
       description:
-        "Shiro's job is creating dreams from humans' endless subconscious. Thereâ€™s a silver pull-ring on Shiro's left ankle, always kept covered. Do NOT touch it! Pulling it will cause somethingâ€? terrifying.",
+        "Shiro's job is creating dreams from humans' endless subconscious. Thereâ€™s a silver pull-ring on Shiro's left ankle, always kept covered. Do NOT touch it! Pulling it will cause somethingâ€¦ terrifying.",
     }
   ]
 
@@ -133,7 +133,7 @@ export default function HomePage() {
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground border-2 border-accent/50 font-bold text-xl px-6 py-6 shadow-lg shadow-accent/50 animate-pulse"
               >
-                âœ? Invite Rewards
+                âœ¨ Invite Rewards
               </Button>
             </div>*/}
           </div>
@@ -180,9 +180,9 @@ export default function HomePage() {
                 INDEX REVELATION
               </h1>
               <div className="flex justify-center gap-2 text-[#e1ddc9] text-base md:text-lg opacity-75">
-                <span>âœ?</span>
+                <span>âœ¦</span>
                 <span>KEYS TO ETERNITY</span>
-                <span>âœ?</span>
+                <span>âœ¦</span>
               </div>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function HomePage() {
               </h2>
               <p className="text-xl text-foreground/90 leading-relaxed">
                 In the game, you are the{" "}
-                <span className="text-accent font-semibold">Keeper of the Forbidden Index</span> â€? a legendary archive
+                <span className="text-accent font-semibold">Keeper of the Forbidden Index</span> â€” a legendary archive
                 filled with banned books. However, countless powerful factions are desperate to claim its overwhelming
                 power, and it's your mission to protect the Index and recover the lost forbidden tomes.
               </p>
@@ -377,11 +377,11 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3 text-foreground/90">
                 <li className="flex items-center gap-3">
-                  <span className="text-accent text-xl">âš?</span>
+                  <span className="text-accent text-xl">âš¡</span>
                   <span>New legendary champions with devastating powers</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span className="text-accent text-xl">âœ?</span>
+                  <span className="text-accent text-xl">âœ¨</span>
                   <span>Expanded story chapters and forgotten tomes</span>
                 </li>
                 <li className="flex items-center gap-3">
@@ -412,7 +412,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-4 justify-center items-center max-w-md mx-auto">
                 {submitted ? (
                   <div className="text-accent font-semibold text-xl">
-                    âœ? Thank you! We'll keep you updated.
+                    âœ¨ Thank you! We'll keep you updated.
                   </div>
                 ) : (
                   <form onSubmit={handleEmailSubmit} className="flex flex-col gap-3 w-full">
