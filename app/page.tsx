@@ -7,7 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
 import { useState } from "react";
-import isEmail from 'validator/es/lib/isEmail';
+// import isEmail from 'validator/es/lib/isEmail';
 
 
 export default function HomePage() {
@@ -20,10 +20,10 @@ export default function HomePage() {
     e.preventDefault();
     if (!email || isSubmitting) return;
 
-    if (!isEmail(email)) {
-      setHelperText("Please enter a valid email address");
-      return;
-    }
+    // if (!isEmail(email)) {
+    //   setHelperText("Please enter a valid email address");
+    //   return;
+    // }
 
     setIsSubmitting(true);
 
@@ -66,6 +66,10 @@ export default function HomePage() {
     { id: 6, query: "medieval fantasy character customization mystical powers" },
   ]
 
+  const scrollToCTA = () => {
+    document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const champions = [
     {
       id: 1,
@@ -94,6 +98,15 @@ export default function HomePage() {
       quote: '"Let the world burn if peace must be forged in fire."',
       description:
         "Raider is a legendary warrior who has fought in countless battles. While beneath his blood-stained armor is someone who still wishes for a quiet, peaceful life",
+    },
+    {
+      id: 4,
+      name: "The Dreamtailor",
+      title: "Shiro",
+      image: "/images/shiro.png",
+      quote: '"Hushhh———The dream needs silence to take shape."',
+      description:
+        "Shiro's job is creating dreams from humans' endless subconscious. There’s a silver pull-ring on Shiro's left ankle, always kept covered. Do NOT touch it! Pulling it will cause something… terrifying.",
     }
   ]
 
@@ -172,6 +185,19 @@ export default function HomePage() {
                 <span>✦</span>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Join Wishlist Button */}
+        <section className="container mx-auto px-4 py-8">
+          <div className="text-center">
+            <Button
+              size="lg"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-8 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105"
+              onClick={scrollToCTA}
+            >
+              Join Wishlist
+            </Button>
           </div>
         </section>
 
@@ -373,7 +399,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="container mx-auto px-4 py-16">
+        <section id="cta" className="container mx-auto px-4 py-16">
           <Card className="bg-gradient-to-br from-primary via-accent/40 to-primary text-foreground p-12 text-center border-accent/50 shadow-2xl shadow-accent/30 relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.1),transparent_70%)]" />
             <div className="relative z-10">
@@ -414,7 +440,7 @@ export default function HomePage() {
                       disabled={isSubmitting}
                       className="w-fit mx-auto bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-2 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105 disabled:opacity-50"
                     >
-                      {isSubmitting ? "Submitting..." : "Join Waitlist"}
+                      {isSubmitting ? "Submitting..." : "Join Wishlist"}
                     </Button>
                   </form>
                 )}

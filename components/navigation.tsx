@@ -12,10 +12,10 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { name: "Discord", icon: "mdi-discord", href: "https://discord.gg/VqQxWBCU" },
-  { name: "Reddit", icon: "mdi-reddit", href: "https://www.reddit.com/user/kairivx/" },
-  { name: "X", icon: "mdi-twitter", href: "https://x.com/lvy_exe" },
-  // { name: "YouTube", icon: "mdi-youtube", href: "https://youtube.com" },
+  { name: "Discord", icon: "mdi-discord", href: "https://discord.gg/9n9egPTd" },
+  { name: "Reddit", icon: "mdi-reddit", href: "https://www.reddit.com/user/kairivx/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" },
+  { name: "X", icon: "mdi-twitter", href: "https://x.com/ivy_exediary" },
+  { name: "YouTube", icon: "mdi-youtube", href: "https://youtube.com/@lvy_exe?si=DhsAVJ3pPhe1vKGO" },
 ];
 
 export function Navigation() {

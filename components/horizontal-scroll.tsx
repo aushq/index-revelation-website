@@ -2,10 +2,10 @@
 
 import type React from "react"
 
-import { useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+import { useRef } from "react"
 
 interface HorizontalScrollProps {
   children: React.ReactNode
@@ -17,11 +17,10 @@ export function HorizontalScroll({ children, className }: HorizontalScrollProps)
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const scrollAmount = 400
-      const newScrollPosition = scrollRef.current.scrollLeft + (direction === "left" ? -scrollAmount : scrollAmount)
-
-      scrollRef.current.scrollTo({
-        left: newScrollPosition,
+      const firstChild = scrollRef.current.children[0] as HTMLElement
+      const scrollAmount = firstChild ? firstChild.offsetWidth : 400
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
       })
     }
