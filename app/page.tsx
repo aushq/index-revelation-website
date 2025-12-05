@@ -104,7 +104,7 @@ export default function HomePage() {
       name: "The Dreamtailor",
       title: "Shiro",
       image: "/images/shiro.png",
-      quote: '"Hushhh———The dream needs silence to take shape."',
+      quote: '"Hushhh-The dream needs silence to take shape."',
       description:
         "Shiro's job is creating dreams from humans' endless subconscious. There's a silver pull-ring on Shiro's left ankle, always kept covered. Do NOT touch it! Pulling it will cause something… terrifying.",
     }
