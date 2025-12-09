@@ -127,40 +127,16 @@ export default function HomePage() {
             />
             <div className="absolute inset-0 bg-linear-to-b from-transparent to-background/95" />
 
-            {/* Invite Rewards Button
-            <div className="absolute top-4 right-4 md:top-8 md:right-8">
+            {/* Invite Rewards Button */}
+            {/* <div className="absolute top-4 right-4 md:top-8 md:right-8">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground border-2 border-accent/50 font-bold text-xl px-6 py-6 shadow-lg shadow-accent/50 animate-pulse"
               >
                 ✨ Invite Rewards
               </Button>
-            </div>*/}
+            </div> */}
           </div>
-
-          {/* <div className="container mx-auto px-4 -mt-8 relative z-10">
-            <div className="flex flex-col sm:flex-row gap-12 justify-center items-center">
-              <div className="magical-button-glow">
-                <Button
-                  size="lg"
-                  className="magical-button ios-glow bg-gradient-to-br from-accent to-yellow-400 hover:from-accent/90 hover:to-yellow-300 text-accent-foreground font-bold text-xl px-12 py-7 rounded-full shadow-2xl border border-accent/50 min-w-[240px] transition-all hover:scale-110"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  iOS Download
-                </Button>
-              </div>
-              <div className="magical-button-glow">
-                <Button
-                  size="lg"
-                  className="magical-button android-glow bg-gradient-to-br from-purple-500 to-blue-400 hover:from-purple-400 hover:to-blue-300 text-white font-bold text-xl px-12 py-7 rounded-full shadow-2xl border border-purple-400/50 min-w-[240px] transition-all hover:scale-110"
-                >
-                  <Download className="mr-2 h-5 w-5" />
-                  Android Download
-                </Button>
-              </div>
-            </div>
-          </div> */}
-
         </section>
 
         {/* Game Title */}
@@ -184,6 +160,28 @@ export default function HomePage() {
                 <span>KEYS TO ETERNITY</span>
                 <span>✦</span>
               </div>
+            </div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <button>
+                <Image
+                  // TODO: dialog join waitlist
+                  src="/images/download/android-en.png"
+                  alt="Get it on Google Play"
+                  width={160}
+                  height={48}
+                />
+              </button>
+              <button>
+                <Image
+                  src="/images/download/ios-en.svg"
+                  alt="Download on the App Store"
+                  width={140}
+                  height={120}
+                />
+              </button>
             </div>
           </div>
         </section>
@@ -244,7 +242,7 @@ export default function HomePage() {
             {champions.map((champion) => (
               <div
                 key={champion.id}
-                className="snap-center flex-shrink-0 w-full md:w-[900px] bg-card rounded-lg overflow-hidden border border-accent/30 shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all"
+                className="snap-center shrink-0 w-full md:w-[900px] bg-card rounded-lg overflow-hidden border border-accent/30 shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
                   {/* Champion Image */}
