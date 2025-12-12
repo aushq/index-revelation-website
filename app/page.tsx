@@ -71,6 +71,11 @@ export default function HomePage() {
     document.getElementById('cta')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToCTAForDownloadButton = () => {
+    scrollToCTA()
+    setHelperText("Store page is coming soon! Stay tuned for updates.")
+  }
+
   const champions = [
     {
       id: 1,
@@ -143,7 +148,7 @@ export default function HomePage() {
         {/* Game Title */}
         <section className="container mx-auto px-4 py-16">
             {/* Game Title Overlay */}
-          <div className="flex h-80 items-center justify-center">
+          <div className="flex flex-col h-80 items-center justify-center">
             <div className="text-center px-4">
               <h1
                 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-4 text-balance drop-shadow-[0_0_30px_rgba(212,175,55,0.6)]"
@@ -156,48 +161,25 @@ export default function HomePage() {
               >
                 INDEX REVELATION
               </h1>
+
               <div className="flex justify-center gap-2 text-[#e1ddc9] text-base md:text-lg opacity-75">
                 <span>✦</span>
                 <span>KEYS TO ETERNITY</span>
                 <span>✦</span>
               </div>
             </div>
-          </div>
 
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button>
-                <Image
-                  // TODO: dialog join waitlist
-                  src="/images/download/android-en.png"
-                  alt="Get it on Google Play"
-                  width={160}
-                  height={48}
-                />
-              </button>
-              <button>
-                <Image
-                  src="/images/download/ios-en.svg"
-                  alt="Download on the App Store"
-                  width={140}
-                  height={120}
-                />
-              </button>
+            <div className="text-center relative mt-8">
+              <Button
+                size="lg"
+                className="cursor-pointer bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-8 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105"
+                onClick={scrollToCTA}
+              >
+                Join Wishlist
+              </Button>
             </div>
           </div>
-        </section>
 
-        {/* Join Wishlist Button */}
-        <section className="container mx-auto px-4 py-8">
-          <div className="text-center">
-            <Button
-              size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-8 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105"
-              onClick={scrollToCTA}
-            >
-              Join Wishlist
-            </Button>
-          </div>
         </section>
 
         {/* Story Section */}
@@ -219,10 +201,43 @@ export default function HomePage() {
                 enemies who dare to steal the Index. You'll experience smooth progression, huge rewards, and insanely
                 satisfying AFK growth throughout the game.
               </p>
+
+              <div className="container mx-auto px-4 relative">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <button
+                    onClick={() => {
+                      scrollToCTAForDownloadButton()
+                    }}
+                    className="cursor-pointer"
+                  >
+                    <Image
+                      // TODO: dialog join waitlist
+                      src="/images/download/android-en.png"
+                      alt="Get it on Google Play"
+                      width={160}
+                      height={48}
+                    />
+                  </button>
+                  <button
+                    onClick={() => {
+                      scrollToCTAForDownloadButton()
+                    }}
+                    className="cursor-pointer"
+                  >
+                    <Image
+                      src="/images/download/ios-en.svg"
+                      alt="Download on the App Store"
+                      width={140}
+                      height={120}
+                    />
+                  </button>
+                </div>
+              </div>
+
             </div>
-            <div className="relative h-96 md:h-full min-h-[400px] rounded-lg overflow-hidden shadow-2xl shadow-accent/20 border border-accent/30">
-              <Image src="/images/story.png" alt="Game Story" fill className="object-cover brightness-75" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            <div className="relative h-96 md:h-full min-h-[700px] rounded-lg overflow-hidden">
+              <Image src="/landing-screenshot-with-frame-half.png" alt="Landing Screenshot" fill className="object-contain brightness-75" />
+              <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
             </div>
           </div>
         </section>
@@ -243,7 +258,7 @@ export default function HomePage() {
             {champions.map((champion) => (
               <div
                 key={champion.id}
-                className="snap-center shrink-0 w-full md:w-[900px] bg-card rounded-lg overflow-hidden border border-accent/30 shadow-2xl shadow-accent/20 hover:shadow-accent/40 transition-all"
+                className="snap-center shrink-0 w-full md:w-[900px] bg-card rounded-lg overflow-hidden border border-accent/30 shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8 md:p-12">
                   {/* Champion Image */}
@@ -399,7 +414,7 @@ export default function HomePage() {
 
         {/* CTA Section */}
         <section id="cta" className="container mx-auto px-4 py-16">
-          <Card className="bg-gradient-to-br from-primary via-accent/40 to-primary text-foreground p-12 text-center border-accent/50 shadow-2xl shadow-accent/30 relative overflow-hidden">
+          <Card className="bg-linear-to-br from-primary via-accent/40 to-primary text-foreground p-12 text-center border-accent/50 shadow-2xl shadow-accent/30 relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.1),transparent_70%)]" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance drop-shadow-[0_0_12px_rgba(212,175,55,0.5)]">
@@ -427,7 +442,7 @@ export default function HomePage() {
                     {
                       helperText && (
                         <div>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-lg text-muted-foreground drop-shadow-accent drop-shadow-2xl">
                             {helperText}
                           </p>
                         </div>
@@ -437,7 +452,7 @@ export default function HomePage() {
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-fit mx-auto bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-2 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105 disabled:opacity-50"
+                      className="cursor-pointer w-fit mx-auto bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-xl px-2 py-6 shadow-xl shadow-accent/50 border border-accent/50 transition-all hover:scale-105 disabled:opacity-50"
                     >
                       {isSubmitting ? "Submitting..." : "Join Wishlist"}
                     </Button>
