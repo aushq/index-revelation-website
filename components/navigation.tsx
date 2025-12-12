@@ -7,11 +7,11 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Notes", href: "/notes" },
+  { name: "News", href: "/news" },
   { name: "Contact", href: "/contact" },
 ];
 
-const socialLinks = [
+export const socialLinks = [
   { name: "Discord", icon: "mdi-discord", href: "https://discord.gg/9n9egPTd" },
   { name: "Reddit", icon: "mdi-reddit", href: "https://www.reddit.com/user/kairivx/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button" },
   { name: "X", icon: "mdi-twitter", href: "https://x.com/ivy_exediary" },
