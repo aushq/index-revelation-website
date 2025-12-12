@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -138,6 +139,8 @@ export default function ArticlePage({ params }: PageProps) {
           </article>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }

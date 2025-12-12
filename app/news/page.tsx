@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
@@ -69,6 +70,8 @@ export default function NewsPage() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
