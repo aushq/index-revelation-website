@@ -115,7 +115,7 @@ export function GoogleAnalytics(props: GAParams) {
       <Script
         async
         id="_next-ga"
-        src={`/n83k`}
+        src={`/n83k/`}
         nonce={nonce}
       />
     </>
